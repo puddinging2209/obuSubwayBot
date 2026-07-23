@@ -1,6 +1,10 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 
+const { stationList } = require('./stationList.json');
+const prefectureList = Array.from(new Set(stationList.map((station) => station.prefecture)));
+const citiesList = Array.from(new Set(stationList.map((station) => station.city)));
+
 // botのクライアントを作成
 const client = new Client({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
@@ -15,8 +19,22 @@ client.on('clientReady', () => {
 client.on('messageCreate', (message) => {
 	if (message.author.bot) return;
 
-	if (message.content === 'ping') {
-		message.reply('pong');
+	if (message.content.match(/(random).*/)) {
+		const filter = message.content.split(' ')[1];
+		switch (true) {
+			case !filter:
+				const random = Math.floor(Math.random() * stationList.length);
+				message.reply(stationList[random].name);
+				break;
+			case prefectureList.includes(filter):
+				const random = Math.floor(Math.random() * stationList.filter((station) => station.prefecture === filter).length);
+				message.reply(stationList.filter((station) => station.prefecture === filter)[random].name);
+				break;
+			case citiesList.includes(filter):
+				const random = Math.floor(Math.random() * stationList.filter((station) => station.city === filter).length);
+				message.reply(stationList.filter((station) => station.city === filter)[random].name);
+				break;
+		}
 	}
 });
 

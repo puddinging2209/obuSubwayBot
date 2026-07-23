@@ -1,0 +1,2804 @@
+[
+  {
+    "name": "愛知学院大学前",
+    "id": "aic",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "アイシン本社前",
+    "id": "ais",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "逢妻",
+    "id": "aiz",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "愛教大前",
+    "id": "akd",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "半田赤レンガ",
+    "id": "akr",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "相川",
+    "id": "akw",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "アローブ前",
+    "id": "alb",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "荒尾町南",
+    "id": "amm",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "相生山東",
+    "id": "aoy",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "荒古",
+    "id": "ark",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "有松",
+    "id": "arm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "荒尾大城",
+    "id": "aro",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "荒尾下畑",
+    "id": "ars",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "荒尾後山",
+    "id": "aru",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "荒尾若宮",
+    "id": "arw",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "飛香台東",
+    "id": "asd",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "朝日町",
+    "id": "ash",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "朝倉",
+    "id": "ask",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "旭町",
+    "id": "asm",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "青山公園西",
+    "id": "aym",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "莇生町",
+    "id": "azb",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "弁天池",
+    "id": "bnt",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "琵琶ヶ池",
+    "id": "bwg",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "坊主山",
+    "id": "bzy",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "長福寺",
+    "id": "cfk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "中央町",
+    "id": "chc",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "知立堀切",
+    "id": "chh",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "中央公園",
+    "id": "chk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "知多半田",
+    "id": "chn",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "知立",
+    "id": "chr",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "長曽橋",
+    "id": "chs",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "中央図書館前",
+    "id": "cht",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "千代田",
+    "id": "chy",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "中京競馬北",
+    "id": "ckk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "知多向陽",
+    "id": "cky",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "セントレア第1ターミナル",
+    "id": "ct1",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "セントレア第2ターミナル",
+    "id": "ct2",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "知多新知",
+    "id": "ctc",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "知多平野",
+    "id": "cth",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "セントレア北",
+    "id": "ctk",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "知多市保健センター",
+    "id": "cts",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "知多八幡",
+    "id": "cty",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "茶屋",
+    "id": "cya",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "大門田",
+    "id": "dmn",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "大応寺",
+    "id": "doj",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "大東町",
+    "id": "dtc",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "江端中央",
+    "id": "ebc",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "江端町",
+    "id": "ebt",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "藤江",
+    "id": "fje",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "藤が丘",
+    "id": "fjg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "富士松",
+    "id": "fjm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "富士松図書館前",
+    "id": "fjt",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "富木島中央",
+    "id": "fkc",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "吹上",
+    "id": "fkg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "富貴",
+    "id": "fki",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "富貴宮前",
+    "id": "fkm",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "福住",
+    "id": "fks",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "福田",
+    "id": "fkt",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "二村台",
+    "id": "fmd",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "伏見橋",
+    "id": "fsm",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "二ツ池北",
+    "id": "ftk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "二村台南",
+    "id": "ftm",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "二ツ池公園前",
+    "id": "fts",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "布土",
+    "id": "ftt",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "神戸川",
+    "id": "gdg",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "神戸",
+    "id": "gdo",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "郷島",
+    "id": "gjm",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "極楽",
+    "id": "gkr",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "長口",
+    "id": "gkt",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "長根北",
+    "id": "gnk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "五反田",
+    "id": "gtn",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "東荒田",
+    "id": "har",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "平針台",
+    "id": "hbd",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "平針住宅",
+    "id": "hbj",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "平針南",
+    "id": "hbm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "平井畑",
+    "id": "hbt",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "日高",
+    "id": "hdk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "半田中町",
+    "id": "hdn",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "半田住吉",
+    "id": "hds",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "生見町",
+    "id": "hem",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "萩",
+    "id": "hgi",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "東ヶ丘",
+    "id": "hgo",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "東屋敷",
+    "id": "hgy",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "東上重原",
+    "id": "hks",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "広久手町",
+    "id": "hkt",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "姫若町",
+    "id": "hmk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "平松",
+    "id": "hmt",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "浜脇",
+    "id": "hmw",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "東名古屋病院",
+    "id": "hnb",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "半田",
+    "id": "hnd",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "日長堀田",
+    "id": "hng",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "半野木",
+    "id": "hnk",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "半田みなと",
+    "id": "hnm",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "日向根",
+    "id": "hnn",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "半田大橋",
+    "id": "hno",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "半田市",
+    "id": "hns",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "半月町",
+    "id": "hnt",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "花園町",
+    "id": "hnz",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "東緒川",
+    "id": "hog",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "本田",
+    "id": "hon",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "宝来町",
+    "id": "hor",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "平針",
+    "id": "hrb",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "春木台",
+    "id": "hrd",
+    "prefecture": "愛知県",
+    "city": "東郷町"
+  },
+  {
+    "name": "柊町",
+    "id": "hrg",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "平井町",
+    "id": "hri",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "広路町",
+    "id": "hrj",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "平子",
+    "id": "hrk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "原松町",
+    "id": "hrm",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "春岡",
+    "id": "hro",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "堀田",
+    "id": "hrt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "柊山",
+    "id": "hry",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "細田",
+    "id": "hsd",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "星崎",
+    "id": "hsh",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "本新町",
+    "id": "hsn",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "豊成",
+    "id": "hso",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "一ツ山住宅",
+    "id": "hts",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "花立",
+    "id": "htt",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "柊四丁目",
+    "id": "hyc",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "東境松本",
+    "id": "hzk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "廻間",
+    "id": "hzm",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "井ヶ谷町南",
+    "id": "igm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "井ヶ谷",
+    "id": "igy",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "石川橋",
+    "id": "ikb",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "池見",
+    "id": "ikm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "今川町",
+    "id": "img",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "いりなか",
+    "id": "irn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "医療センター",
+    "id": "iry",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "石畑",
+    "id": "ish",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "石原",
+    "id": "isi",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "一色町",
+    "id": "isk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "岩ヶ池",
+    "id": "iwg",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "岩崎城",
+    "id": "iws",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "十念寺",
+    "id": "jnj",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "十三塚",
+    "id": "jsd",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "寺徳",
+    "id": "jtk",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "駒場橋",
+    "id": "kbb",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "駒場町西",
+    "id": "kbn",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "貴船",
+    "id": "kfn",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "水主ヶ池西",
+    "id": "kgn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "鹿狩池",
+    "id": "kgr",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "篭田",
+    "id": "kgt",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "亀原",
+    "id": "khr",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "刈谷池田",
+    "id": "kik",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "古布九条",
+    "id": "kjo",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "梶田町",
+    "id": "kjt",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "鎌倉台",
+    "id": "kkd",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "水主ヶ池",
+    "id": "kkg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "沓掛",
+    "id": "kkk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "健康の森西口",
+    "id": "kkn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "狩野公園",
+    "id": "kko",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "高倉",
+    "id": "kkr",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "菊里",
+    "id": "kkz",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "米田町",
+    "id": "kmd",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "加茂川公園",
+    "id": "kmg",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "上浜田",
+    "id": "kmh",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "上池",
+    "id": "kmi",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "釜池",
+    "id": "kmk",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "沓掛町森前",
+    "id": "kmm",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "神ノ倉",
+    "id": "kmn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "駒新町",
+    "id": "kms",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "鎌研",
+    "id": "kmt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "亀崎北浦",
+    "id": "kmz",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "蟹田橋",
+    "id": "knd",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "県営大府住宅",
+    "id": "kne",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "金色",
+    "id": "kni",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "金城ふ頭",
+    "id": "knj",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "公園北",
+    "id": "knk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "公園南",
+    "id": "knm",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "香流川",
+    "id": "knr",
+    "prefecture": "愛知県",
+    "city": "長久手市"
+  },
+  {
+    "name": "古布",
+    "id": "koh",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "刈谷青山",
+    "id": "kra",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "雁宿公園",
+    "id": "krd",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "衣ヶ原",
+    "id": "krg",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "刈谷交通遊園前",
+    "id": "krk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "宝町",
+    "id": "krm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "鞍流瀬川",
+    "id": "krn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "刈谷市総合運動公園",
+    "id": "krs",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "刈谷高松",
+    "id": "krt",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "刈谷",
+    "id": "kry",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "樫塚",
+    "id": "ksd",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "上重原",
+    "id": "ksg",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "古戦場公園前",
+    "id": "ksk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "刈谷住吉",
+    "id": "ksm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "庚申町",
+    "id": "ksn",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "上汐田",
+    "id": "kso",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "刈谷新栄町",
+    "id": "kss",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "寿二区",
+    "id": "ktb",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "北山町",
+    "id": "ktc",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "狐平井",
+    "id": "kth",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "北条公園",
+    "id": "ktj",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "北加木屋",
+    "id": "ktk",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "北山",
+    "id": "ktm",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "片名",
+    "id": "ktn",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "北崎大島",
+    "id": "kto",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "北崎",
+    "id": "kts",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "北蕨",
+    "id": "ktw",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "北屋敷",
+    "id": "kty",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "共和三丁目",
+    "id": "kw3",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "河和",
+    "id": "kwa",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "河和口",
+    "id": "kwg",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "古和井",
+    "id": "kwi",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "河和上前田",
+    "id": "kwk",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "川名公園",
+    "id": "kwn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "共和",
+    "id": "kyw",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "小坂町",
+    "id": "kzk",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "三好荒池",
+    "id": "mar",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "南千種",
+    "id": "mck",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "前田口",
+    "id": "mdg",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "みどり公園",
+    "id": "mdk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "緑ヶ丘",
+    "id": "mdr",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "メディアス体育館前",
+    "id": "mds",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "前田",
+    "id": "med",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "三好丘",
+    "id": "mgk",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "間米町",
+    "id": "mgm",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "三好丘三丁目",
+    "id": "mgs",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "南本町",
+    "id": "mhc",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "三好池",
+    "id": "mik",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "南神田",
+    "id": "mjd",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "美城ケ根",
+    "id": "mkg",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "向が丘",
+    "id": "mki",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "三河金山",
+    "id": "mkk",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "牧野ヶ池東",
+    "id": "mkn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "南笠寺",
+    "id": "mks",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "南区役所前",
+    "id": "mky",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "梅森台",
+    "id": "mmd",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "梅森西",
+    "id": "mmn",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "三好森下",
+    "id": "mms",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "梅森坂",
+    "id": "mmz",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "招き猫通り",
+    "id": "mnd",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "美浜中平井",
+    "id": "mnh",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "南加木屋",
+    "id": "mnk",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "港本町",
+    "id": "mnt",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "南大高",
+    "id": "mod",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "師崎漁港",
+    "id": "mrg",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "丸池台",
+    "id": "mri",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "森岡工業団地南",
+    "id": "mrk",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "森岡中町",
+    "id": "mrn",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "丸岡",
+    "id": "mro",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "丸田町",
+    "id": "mrt",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "師崎",
+    "id": "mrz",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "三河渋谷",
+    "id": "msb",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "明成一屋",
+    "id": "msh",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "三崎町",
+    "id": "msk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "前新切",
+    "id": "msn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "三ツ池",
+    "id": "mti",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "三河高浜",
+    "id": "mtk",
+    "prefecture": "愛知県",
+    "city": "高浜市"
+  },
+  {
+    "name": "元鳴尾",
+    "id": "mtn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "宮畔",
+    "id": "myg",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "宮ノ前",
+    "id": "mym",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "宮腰",
+    "id": "myn",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "みよし市",
+    "id": "mys",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "宮戸橋",
+    "id": "myt",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "宮内町",
+    "id": "myu",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "宮津",
+    "id": "myz",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "瑞穂町",
+    "id": "mzh",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "師崎港",
+    "id": "mzk",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "明前町",
+    "id": "mzn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "西富士松",
+    "id": "nfj",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "長土井",
+    "id": "ngd",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "長久手",
+    "id": "ngk",
+    "prefecture": "愛知県",
+    "city": "長久手市"
+  },
+  {
+    "name": "長根",
+    "id": "ngn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "名古屋短大前",
+    "id": "ngt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "西石浜",
+    "id": "nis",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "名古屋競馬場",
+    "id": "nkb",
+    "prefecture": "愛知県",
+    "city": "弥富市"
+  },
+  {
+    "name": "中手町",
+    "id": "nkc",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "中田町",
+    "id": "nkd",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "中田古屋敷",
+    "id": "nkf",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "中平地",
+    "id": "nkh",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "猫池",
+    "id": "nki",
+    "prefecture": "愛知県",
+    "city": "東郷町"
+  },
+  {
+    "name": "鳴子南",
+    "id": "nkm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "中田日進",
+    "id": "nkn",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "長久手市",
+    "id": "nks",
+    "prefecture": "愛知県",
+    "city": "長久手市"
+  },
+  {
+    "name": "長草天神社",
+    "id": "nkt",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "中山町",
+    "id": "nky",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "七曲公園",
+    "id": "nmg",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "新海池",
+    "id": "nmk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "鳴丘",
+    "id": "nrk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "鳴海",
+    "id": "nrm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "成岩本町",
+    "id": "nrw",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "南陵",
+    "id": "nry",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "日進白山",
+    "id": "nsa",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "日進東山",
+    "id": "nsi",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "日進",
+    "id": "nsn",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "西岡町",
+    "id": "nso",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "日進市",
+    "id": "nss",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "名和",
+    "id": "nwa",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "野崎橋",
+    "id": "nzb",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "西境本郷",
+    "id": "nzk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "大府森岡",
+    "id": "obm",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "大府市役所前",
+    "id": "obs",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "大府",
+    "id": "obu",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "大高",
+    "id": "odk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "大高丸ノ内",
+    "id": "odm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "於大公園西",
+    "id": "odn",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "緒川相生",
+    "id": "oga",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "扇川",
+    "id": "ogg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "緒川",
+    "id": "ogw",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "大浜街道",
+    "id": "ohm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "大井港",
+    "id": "oik",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "追分町",
+    "id": "oiw",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "岡田川",
+    "id": "okd",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "桶狭間",
+    "id": "okh",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "大池公園",
+    "id": "okk",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "岡前",
+    "id": "okm",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "沖ノ田",
+    "id": "okn",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "大久伝町",
+    "id": "okt",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "乙川",
+    "id": "okw",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "大峯",
+    "id": "omn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "表山",
+    "id": "omt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "恩田",
+    "id": "ond",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "恩任寺",
+    "id": "onn",
+    "prefecture": "愛知県",
+    "city": "高浜市"
+  },
+  {
+    "name": "折戸寺脇",
+    "id": "ord",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "大島町",
+    "id": "osh",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "大坪",
+    "id": "otb",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "緒川植山",
+    "id": "oue",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "乙川畑田",
+    "id": "owh",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "大脇",
+    "id": "owk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "尾張森岡",
+    "id": "owm",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "緒川塩田",
+    "id": "ows",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "乙川薬師",
+    "id": "owy",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "小山",
+    "id": "oym",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "りんくうビーチ",
+    "id": "rnk",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "りんくう常滑",
+    "id": "rnt",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "龍ノ脇",
+    "id": "rnw",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "大高緑地口",
+    "id": "ryg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "大高緑地西",
+    "id": "ryn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "新青山",
+    "id": "say",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "新知台",
+    "id": "scd",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "七本木池",
+    "id": "sch",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "新田町",
+    "id": "sdn",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "末広",
+    "id": "seh",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "新富貴",
+    "id": "sfk",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "重原",
+    "id": "sgh",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "至学館大学前",
+    "id": "shg",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "聚楽園",
+    "id": "shr",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "昭和町",
+    "id": "shw",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "新池",
+    "id": "sik",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "潮見が丘",
+    "id": "sim",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "新石根",
+    "id": "sin",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "清城",
+    "id": "sis",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "栄町二丁目",
+    "id": "sk2",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "栄町四丁目",
+    "id": "sk4",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "勢子坊",
+    "id": "skb",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "朝倉団地",
+    "id": "skd",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "栄町",
+    "id": "ske",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "境川",
+    "id": "skg",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "正光寺",
+    "id": "skj",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "織機本社前",
+    "id": "skk",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "桜木",
+    "id": "skr",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "新笠寺",
+    "id": "sks",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "鹿山",
+    "id": "sky",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "島田橋",
+    "id": "smb",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "島田",
+    "id": "smd",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "新舞子口",
+    "id": "smg",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "新舞子北",
+    "id": "smk",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "下田ノ松",
+    "id": "smn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "下大脇",
+    "id": "smo",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "新宝",
+    "id": "smp",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "新師崎",
+    "id": "smr",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "下重原",
+    "id": "sms",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "住友重機前",
+    "id": "smt",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "住吉町",
+    "id": "smy",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "清水ケ根",
+    "id": "smz",
+    "prefecture": "愛知県",
+    "city": "東郷町"
+  },
+  {
+    "name": "新知東町",
+    "id": "snc",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "新開町",
+    "id": "snk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "篠の風",
+    "id": "snn",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "洲の崎",
+    "id": "sns",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "三反田",
+    "id": "snt",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "汐田",
+    "id": "sod",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "潮見",
+    "id": "som",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "惣作",
+    "id": "sos",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "白魦池",
+    "id": "srh",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "佐布里池",
+    "id": "sri",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "白金",
+    "id": "srk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "白鳥",
+    "id": "srt",
+    "prefecture": "愛知県",
+    "city": "東郷町"
+  },
+  {
+    "name": "新生町",
+    "id": "sse",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "新栄町",
+    "id": "ssk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "新常滑",
+    "id": "stk",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "新富町",
+    "id": "stm",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "里中",
+    "id": "stn",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "新浦戸",
+    "id": "sur",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "炭焼",
+    "id": "syk",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "新左山",
+    "id": "szy",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "高針台",
+    "id": "tbd",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "飛島ふ頭",
+    "id": "tbs",
+    "prefecture": "愛知県",
+    "city": "飛島村"
+  },
+  {
+    "name": "東郷",
+    "id": "tgo",
+    "prefecture": "愛知県",
+    "city": "東郷町"
+  },
+  {
+    "name": "太田川",
+    "id": "tgw",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "司町",
+    "id": "tkc",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "高根台",
+    "id": "tkd",
+    "prefecture": "愛知県",
+    "city": "阿久比町"
+  },
+  {
+    "name": "高鴨",
+    "id": "tkg",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "高浜碧海",
+    "id": "tkh",
+    "prefecture": "愛知県",
+    "city": "高浜市"
+  },
+  {
+    "name": "高辻",
+    "id": "tkj",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "常滑競艇",
+    "id": "tkk",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "滝ノ水",
+    "id": "tkm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "常滑",
+    "id": "tkn",
+    "prefecture": "愛知県",
+    "city": "常滑市"
+  },
+  {
+    "name": "宝",
+    "id": "tkr",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "時志",
+    "id": "tks",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "武豊",
+    "id": "tkt",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "竹の山",
+    "id": "tky",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "下門",
+    "id": "tmn",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "田面",
+    "id": "tmo",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "天白",
+    "id": "tmp",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "東洋町",
+    "id": "toy",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "鳥居",
+    "id": "tri",
+    "prefecture": "愛知県",
+    "city": "知立市"
+  },
+  {
+    "name": "鶴舞",
+    "id": "trm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "鳥澄",
+    "id": "trs",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "寺下",
+    "id": "trt",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "東陵",
+    "id": "try",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "徳重",
+    "id": "tsg",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "東新町",
+    "id": "tsn",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "田代町",
+    "id": "tsr",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "豊田スタジアム前",
+    "id": "tst",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "武豊鎮守",
+    "id": "ttc",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "辰池",
+    "id": "tti",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "つつじが丘",
+    "id": "ttj",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "堤本町",
+    "id": "ttm",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "武豊中根",
+    "id": "ttn",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "豊田東新町",
+    "id": "tts",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "豊明団地",
+    "id": "tyd",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "豊明市",
+    "id": "tyk",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "東陽町",
+    "id": "tyo",
+    "prefecture": "愛知県",
+    "city": "刈谷市"
+  },
+  {
+    "name": "豊明新田",
+    "id": "tys",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "豊田市",
+    "id": "tyt",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "姥子山",
+    "id": "ubi",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "姥池",
+    "id": "ubk",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "内田",
+    "id": "ucd",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "梅森台北",
+    "id": "udk",
+    "prefecture": "愛知県",
+    "city": "日進市"
+  },
+  {
+    "name": "内田面",
+    "id": "udm",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "ウド",
+    "id": "udo",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "上野町",
+    "id": "uen",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "福谷",
+    "id": "ukg",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "梅が丘",
+    "id": "umg",
+    "prefecture": "愛知県",
+    "city": "知多市"
+  },
+  {
+    "name": "馬池町",
+    "id": "umk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "梅之木",
+    "id": "umn",
+    "prefecture": "愛知県",
+    "city": "美浜町"
+  },
+  {
+    "name": "上野台",
+    "id": "und",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "鰻池",
+    "id": "unk",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "浦之島",
+    "id": "urn",
+    "prefecture": "愛知県",
+    "city": "武豊町"
+  },
+  {
+    "name": "牛巻",
+    "id": "usm",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "後田",
+    "id": "usr",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "丑寅海斗",
+    "id": "ust",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "内海海岸",
+    "id": "utk",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "内海",
+    "id": "utm",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "若宮",
+    "id": "wkm",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "脇ノ田",
+    "id": "wkn",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "若王子川",
+    "id": "wko",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  },
+  {
+    "name": "若草",
+    "id": "wks",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "湾岸長島",
+    "id": "wng",
+    "prefecture": "三重県",
+    "city": "桑名市"
+  },
+  {
+    "name": "早稲倉",
+    "id": "wsk",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "矢場町",
+    "id": "yba",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "呼続",
+    "id": "ybt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "与五八",
+    "id": "ygh",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "八事",
+    "id": "ygt",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "矢作川",
+    "id": "yhg",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "横須賀高校前",
+    "id": "yks",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "山田海岸",
+    "id": "ymd",
+    "prefecture": "愛知県",
+    "city": "南知多町"
+  },
+  {
+    "name": "蓬平地",
+    "id": "ymg",
+    "prefecture": "愛知県",
+    "city": "みよし市"
+  },
+  {
+    "name": "柳ケ坪",
+    "id": "yng",
+    "prefecture": "愛知県",
+    "city": "東浦町"
+  },
+  {
+    "name": "岩滑東",
+    "id": "ynh",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "岩滑西",
+    "id": "ynn",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "有楽町",
+    "id": "yrk",
+    "prefecture": "愛知県",
+    "city": "半田市"
+  },
+  {
+    "name": "安田通",
+    "id": "ysd",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "社が丘",
+    "id": "ysh",
+    "prefecture": "愛知県",
+    "city": "名古屋市"
+  },
+  {
+    "name": "吉川",
+    "id": "ysk",
+    "prefecture": "愛知県",
+    "city": "大府市"
+  },
+  {
+    "name": "八迫山",
+    "id": "yts",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
+    "name": "八幡新田",
+    "id": "ywt",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "寿鎌",
+    "id": "zgm",
+    "prefecture": "愛知県",
+    "city": "東海市"
+  },
+  {
+    "name": "前後",
+    "id": "zng",
+    "prefecture": "愛知県",
+    "city": "豊明市"
+  }
+]
