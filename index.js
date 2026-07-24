@@ -47,10 +47,10 @@ client.on('messageCreate', async (message) => {
 	// クイズ
 	if (message.content === '!quiz') {
 		const random = Math.floor(Math.random() * stationList.length);
-		const question = staltionList[random].id;
+		const question = stationList[random].id;
 		const answer = stationList[random].name;
 
-		const sentMessage = await message.channel.send(question);
+		const sentMessage = await message.channel.send(`question: ${question}`);
 
 		activeQuizzes.set(message.channel.id, {
 			questionMessageId: sentMessage.id,
@@ -71,9 +71,12 @@ client.on('messageCreate', async (message) => {
 			}
 		}
 	}
-});
 
-client.login(process.env.DISCORD_TOKEN);
+	if (message.content === '!escapeQuiz') {
+		message.reply(`answer: ${currentQuiz.answer}`);
+		activeQuizzes.delete(message.channel.id);
+	}
+});
 
 // ダミー
 import http from 'http';
@@ -81,3 +84,5 @@ http.createServer((req, res) => {
 	res.write('Bot is alive!');
 	res.end();
 }).listen(process.env.PORT || 10000);
+
+client.login(process.env.DISCORD_TOKEN);
