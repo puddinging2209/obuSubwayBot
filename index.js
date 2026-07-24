@@ -6,6 +6,8 @@ import stationList from './stationList.json' with { type: 'json' };
 const prefectureList = Array.from(new Set(stationList.map((station) => station.prefecture)));
 const citiesList = Array.from(new Set(stationList.map((station) => station.city)));
 
+const activeQuizzes = new Map();
+
 // botのクライアントを作成
 const client = new Client({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
@@ -17,10 +19,11 @@ client.on('clientReady', () => {
 });
 
 // メッセージを受け取ったとき
-client.on('messageCreate', (message) => {
+client.on('messageCreate', async (message) => {
 	if (message.author.bot) return;
 
-	if (message.content.match(/(random).*/)) {
+	// ランダム
+	if (message.content.match(/(!random).*/)) {
 		const filter = message.content.split(' ')[1];
 		switch (true) {
 			case !filter: {
@@ -37,6 +40,34 @@ client.on('messageCreate', (message) => {
 				const random = Math.floor(Math.random() * stationList.filter((station) => station.city === filter).length);
 				message.reply(stationList.filter((station) => station.city === filter)[random].name);
 				break;
+			}
+		}
+	}
+
+	// クイズ
+	if (message.content === '!quiz') {
+		const random = Math.floor(Math.random() * stationList.length);
+		const question = staltionList[random].id;
+		const answer = stationList[random].name;
+
+		const sentMessage = await message.channel.send(question);
+
+		activeQuizzes.set(message.channel.id, {
+			questionMessageId: sentMessage.id,
+			answer: answer,
+		});
+		return;
+	}
+
+	const currentQuiz = activeQuizzes.get(message.channel.id);
+
+	if (currentQuiz && message.reference) {
+		if (message.reference.messageId === currentQuiz.questionMessageId) {
+			if (message.content.trim() === currentQuiz.answer) {
+				await message.reply('o');
+				activeQuizzes.delete(message.channel.id);
+			} else {
+				await message.reply('x');
 			}
 		}
 	}
