@@ -3,8 +3,6 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 import stationList from './stationList.json' with { type: 'json' };
-const prefectureList = Array.from(new Set(stationList.map((station) => station.prefecture)));
-const citiesList = Array.from(new Set(stationList.map((station) => station.city)));
 
 const activeQuizzes = new Map();
 
@@ -24,24 +22,19 @@ client.on('messageCreate', async (message) => {
 
 	// ランダム
 	if (message.content.match(/(!random).*/)) {
-		const filter = message.content.split(' ')[1];
-		switch (true) {
-			case !filter: {
-				const random = Math.floor(Math.random() * stationList.length);
-				message.reply(stationList[random].name);
-				break;
-			}
-			case prefectureList.includes(filter): {
-				const random = Math.floor(Math.random() * stationList.filter((station) => station.prefecture === filter).length);
-				message.reply(stationList.filter((station) => station.prefecture === filter)[random].name);
-				break;
-			}
-			case citiesList.includes(filter): {
-				const random = Math.floor(Math.random() * stationList.filter((station) => station.city === filter).length);
-				message.reply(stationList.filter((station) => station.city === filter)[random].name);
-				break;
-			}
+		const filters = message.content.split(' ').slice(1);
+		if (filters.length === 0) {
+			const random = Math.floor(Math.random() * stationList.length);
+			message.reply(stationList[random].name);
+			return;
 		}
+
+		const filtered = stationList.filter((station) => {
+			return filters.includes(station.prefecture) || filters.includes(station.city);
+		});
+		const random = Math.floor(Math.random() * filtered.length);
+		message.reply(filtered[random].name);
+		return;
 	}
 
 	// クイズ
@@ -64,10 +57,10 @@ client.on('messageCreate', async (message) => {
 	if (currentQuiz && message.reference) {
 		if (message.reference.messageId === currentQuiz.questionMessageId) {
 			if (message.content.trim() === currentQuiz.answer) {
-				await message.reply('o');
+				await message.reply('ok');
 				activeQuizzes.delete(message.channel.id);
 			} else {
-				await message.reply('x');
+				await message.reply('no');
 			}
 		}
 	}

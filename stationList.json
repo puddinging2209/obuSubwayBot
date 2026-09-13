@@ -240,7 +240,7 @@
     "city": "常滑市"
   },
   {
-    "name": "知多市保健センター",
+    "name": "知多市",
     "id": "cts",
     "prefecture": "愛知県",
     "city": "知多市"
@@ -258,10 +258,22 @@
     "city": "大府市"
   },
   {
+    "name": "大樹寺",
+    "id": "djj",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "大門田",
     "id": "dmn",
     "prefecture": "愛知県",
     "city": "武豊町"
+  },
+  {
+    "name": "大門",
+    "id": "dmo",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "大応寺",
@@ -328,6 +340,12 @@
     "id": "fki",
     "prefecture": "愛知県",
     "city": "武豊町"
+  },
+  {
+    "name": "福受町",
+    "id": "fkj",
+    "prefecture": "愛知県",
+    "city": "豊田市"
   },
   {
     "name": "富貴宮前",
@@ -498,6 +516,18 @@
     "city": "知多市"
   },
   {
+    "name": "東小針",
+    "id": "hkb",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "東公園",
+    "id": "hko",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "東上重原",
     "id": "hks",
     "prefecture": "愛知県",
@@ -508,6 +538,12 @@
     "id": "hkt",
     "prefecture": "愛知県",
     "city": "豊田市"
+  },
+  {
+    "name": "本町通",
+    "id": "hmd",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "姫若町",
@@ -604,6 +640,12 @@
     "id": "hor",
     "prefecture": "愛知県",
     "city": "半田市"
+  },
+  {
+    "name": "東岡崎",
+    "id": "hoz",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "平針",
@@ -720,10 +762,34 @@
     "city": "武豊町"
   },
   {
+    "name": "井田",
+    "id": "ida",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "井田荒居",
+    "id": "idr",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "伊賀町",
+    "id": "igc",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "井ヶ谷町南",
     "id": "igm",
     "prefecture": "愛知県",
     "city": "刈谷市"
+  },
+  {
+    "name": "伊賀新町",
+    "id": "igs",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "井ヶ谷",
@@ -744,10 +810,22 @@
     "city": "名古屋市"
   },
   {
+    "name": "池下",
+    "id": "iks",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "今川町",
     "id": "img",
     "prefecture": "愛知県",
     "city": "刈谷市"
+  },
+  {
+    "name": "稲熊",
+    "id": "ing",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "いりなか",
@@ -820,6 +898,12 @@
     "id": "kbn",
     "prefecture": "愛知県",
     "city": "豊田市"
+  },
+  {
+    "name": "小針",
+    "id": "kbr",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "貴船",
@@ -912,6 +996,12 @@
     "city": "名古屋市"
   },
   {
+    "name": "駒場町",
+    "id": "kmb",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
     "name": "米田町",
     "id": "kmd",
     "prefecture": "愛知県",
@@ -952,6 +1042,18 @@
     "id": "kmn",
     "prefecture": "愛知県",
     "city": "名古屋市"
+  },
+  {
+    "name": "鴨田",
+    "id": "kmo",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "小松原",
+    "id": "kmr",
+    "prefecture": "愛知県",
+    "city": "豊田市"
   },
   {
     "name": "駒新町",
@@ -1182,6 +1284,12 @@
     "city": "大府市"
   },
   {
+    "name": "北歌口",
+    "id": "kug",
+    "prefecture": "愛知県",
+    "city": "安城市"
+  },
+  {
     "name": "共和三丁目",
     "id": "kw3",
     "prefecture": "愛知県",
@@ -1282,6 +1390,12 @@
     "id": "mgm",
     "prefecture": "愛知県",
     "city": "豊明市"
+  },
+  {
+    "name": "向金",
+    "id": "mgn",
+    "prefecture": "愛知県",
+    "city": "豊田市"
   },
   {
     "name": "三好丘三丁目",
@@ -1462,6 +1576,12 @@
     "id": "msn",
     "prefecture": "愛知県",
     "city": "大府市"
+  },
+  {
+    "name": "三田田",
+    "id": "mtd",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "三ツ池",
@@ -1656,6 +1776,12 @@
     "city": "名古屋市"
   },
   {
+    "name": "能見",
+    "id": "nom",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "鳴丘",
     "id": "nrk",
     "prefecture": "愛知県",
@@ -1842,6 +1968,12 @@
     "city": "半田市"
   },
   {
+    "name": "岡崎",
+    "id": "okz",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "大峯",
     "id": "omn",
     "prefecture": "愛知県",
@@ -1860,6 +1992,12 @@
     "city": "刈谷市"
   },
   {
+    "name": "岡崎中田",
+    "id": "onk",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "恩任寺",
     "id": "onn",
     "prefecture": "愛知県",
@@ -1870,6 +2008,12 @@
     "id": "ord",
     "prefecture": "愛知県",
     "city": "日進市"
+  },
+  {
+    "name": "小呂",
+    "id": "oro",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "大島町",
@@ -1924,6 +2068,24 @@
     "id": "oym",
     "prefecture": "愛知県",
     "city": "刈谷市"
+  },
+  {
+    "name": "岡崎公園東",
+    "id": "ozh",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "岡崎北野",
+    "id": "ozk",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
+    "name": "岡崎大橋",
+    "id": "ozo",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "りんくうビーチ",
@@ -2454,6 +2616,12 @@
     "city": "名古屋市"
   },
   {
+    "name": "戸崎",
+    "id": "tsk",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
+  },
+  {
     "name": "東新町",
     "id": "tsn",
     "prefecture": "愛知県",
@@ -2676,6 +2844,12 @@
     "city": "大府市"
   },
   {
+    "name": "若園",
+    "id": "wkz",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
     "name": "湾岸長島",
     "id": "wng",
     "prefecture": "三重県",
@@ -2778,6 +2952,12 @@
     "city": "大府市"
   },
   {
+    "name": "吉原町",
+    "id": "ysw",
+    "prefecture": "愛知県",
+    "city": "豊田市"
+  },
+  {
     "name": "八迫山",
     "id": "yts",
     "prefecture": "愛知県",
@@ -2794,6 +2974,12 @@
     "id": "zgm",
     "prefecture": "愛知県",
     "city": "東海市"
+  },
+  {
+    "name": "銭堤",
+    "id": "znd",
+    "prefecture": "愛知県",
+    "city": "岡崎市"
   },
   {
     "name": "前後",
