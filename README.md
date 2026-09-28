@@ -31,7 +31,15 @@ https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=6
 > リプライで回答
 
 ```
-!escapeQuiz
+!quiz 市町村名 | 都道府県名
 ```
 
-> クイズを止めて、解答を表示する
+> 駅idから駅名を当てるクイズ  
+> 指定の自治体内からのみ出題  
+> リプライで回答
+
+```
+!showAns
+```
+
+> 出題にリプライして、その解答を表示

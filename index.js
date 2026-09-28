@@ -4,8 +4,6 @@ dotenv.config();
 
 import stationList from './stationList.json' with { type: 'json' };
 
-const activeQuizzes = new Map();
-
 // botのクライアントを作成
 const client = new Client({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
@@ -39,35 +37,45 @@ client.on('messageCreate', async (message) => {
 
 	// クイズ
 	if (message.content === '!quiz') {
-		const random = Math.floor(Math.random() * stationList.length);
-		const question = stationList[random].id;
-		const answer = stationList[random].name;
+		const filters = message.content.split(' ').slice(1);
+		if (filters.length === 0) {
+			const random = Math.floor(Math.random() * stationList.length);
+			message.reply('question: ' + stationList[random].id);
+			return;
+		}
 
-		const sentMessage = await message.channel.send(`question: ${question}`);
-
-		activeQuizzes.set(message.channel.id, {
-			questionMessageId: sentMessage.id,
-			answer: answer,
+		const filtered = stationList.filter((station) => {
+			return filters.includes(station.prefecture) || filters.includes(station.city);
 		});
+		const random = Math.floor(Math.random() * filtered.length);
+		message.reply('question: ' + filtered[random].id);
 		return;
 	}
 
-	const currentQuiz = activeQuizzes.get(message.channel.id);
-
-	if (currentQuiz && message.reference) {
-		if (message.reference.messageId === currentQuiz.questionMessageId) {
-			if (message.content.trim() === currentQuiz.answer) {
-				await message.reply('ok');
-				activeQuizzes.delete(message.channel.id);
-			} else {
-				await message.reply('no');
-			}
+	if (message.reference) {
+		let questionMessage;
+		try {
+			questionMessage = await message.fetchReference();
+		} catch {
+			return;
 		}
-	}
 
-	if (message.content === '!escapeQuiz') {
-		message.reply(`answer: ${currentQuiz.answer}`);
-		activeQuizzes.delete(message.channel.id);
+		if (!questionMessage.author.bot) return;
+
+		const questionMatch = questionMessage.content.match(/^question:\s*(\S+)\s*$/);
+		const quizStation = questionMatch ? stationList.find((station) => station.id === questionMatch[1]) : undefined;
+		if (!quizStation) return;
+
+		if (message.content === '!showAns') {
+			await message.reply(`answer: ${quizStation.name}`);
+			return;
+		}
+
+		if (message.content.trim() === quizStation.name) {
+			await message.reply('ok');
+		} else {
+			await message.reply('no');
+		}
 	}
 });
 
