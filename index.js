@@ -2,7 +2,27 @@ import { Client, GatewayIntentBits } from 'discord.js';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import stationList from './stationList.json' with { type: 'json' };
+import { createLocalGovClient } from '@b4moss/jp-local-gov-id';
+import municipalityDataset from '@b4moss/jp-local-gov-id-data';
+import stationList from './data/stationList.json' with { type: 'json' };
+
+const localGovClient = await createLocalGovClient({ data: municipalityDataset });
+const municipalityEntries = await Promise.all(
+	[...new Set(stationList.map(({ govId }) => govId))].map(async (govId) => {
+		const municipality = await localGovClient.getMunicipalityByCode(govId);
+		if (!municipality) throw new Error(`Unknown municipality code: ${govId}`);
+		return [govId, municipality];
+	}),
+);
+const municipalitiesByGovId = new Map(municipalityEntries);
+const stations = stationList.map((station) => {
+	const municipality = municipalitiesByGovId.get(station.govId);
+	return {
+		...station,
+		city: municipality.name,
+		prefecture: municipality.prefectureName,
+	};
+});
 
 // botのクライアントを作成
 const client = new Client({
@@ -22,12 +42,12 @@ client.on('messageCreate', async (message) => {
 	if (message.content.startsWith('!random')) {
 		const filters = message.content.split(' ').slice(1);
 		if (filters.length === 0) {
-			const random = Math.floor(Math.random() * stationList.length);
-			message.reply(stationList[random].name);
+			const random = Math.floor(Math.random() * stations.length);
+			message.reply(stations[random].name);
 			return;
 		}
 
-		const filtered = stationList.filter((station) => {
+		const filtered = stations.filter((station) => {
 			return filters.includes(station.prefecture) || filters.includes(station.city);
 		});
 		const random = Math.floor(Math.random() * filtered.length);
@@ -39,12 +59,12 @@ client.on('messageCreate', async (message) => {
 	if (message.content.startsWith('!quiz')) {
 		const filters = message.content.split(' ').slice(1);
 		if (filters.length === 0) {
-			const random = Math.floor(Math.random() * stationList.length);
-			message.reply('question: ' + stationList[random].id);
+			const random = Math.floor(Math.random() * stations.length);
+			message.reply('question: ' + stations[random].id);
 			return;
 		}
 
-		const filtered = stationList.filter((station) => {
+		const filtered = stations.filter((station) => {
 			return filters.includes(station.prefecture) || filters.includes(station.city);
 		});
 		const random = Math.floor(Math.random() * filtered.length);
