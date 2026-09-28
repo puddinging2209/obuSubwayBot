@@ -19,7 +19,7 @@ client.on('messageCreate', async (message) => {
 	if (message.author.bot) return;
 
 	// ランダム
-	if (message.content.match(/(!random).*/)) {
+	if (message.content.startsWith('!random')) {
 		const filters = message.content.split(' ').slice(1);
 		if (filters.length === 0) {
 			const random = Math.floor(Math.random() * stationList.length);
@@ -36,7 +36,7 @@ client.on('messageCreate', async (message) => {
 	}
 
 	// クイズ
-	if (message.content === '!quiz') {
+	if (message.content.startsWith('!quiz')) {
 		const filters = message.content.split(' ').slice(1);
 		if (filters.length === 0) {
 			const random = Math.floor(Math.random() * stationList.length);
