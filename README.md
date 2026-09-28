@@ -39,7 +39,7 @@ https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=6
 > リプライで回答
 
 ```
-!showAns
+!ans
 ```
 
 > 出題にリプライして、その解答を表示

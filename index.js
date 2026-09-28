@@ -86,15 +86,15 @@ client.on('messageCreate', async (message) => {
 		const quizStation = questionMatch ? stationList.find((station) => station.id === questionMatch[1]) : undefined;
 		if (!quizStation) return;
 
-		if (message.content === '!showAns') {
+		if (message.content === '!ans') {
 			await message.reply(`answer: ${quizStation.name}`);
 			return;
 		}
 
 		if (message.content.trim() === quizStation.name) {
-			await message.reply('ok');
+			await message.reply('right');
 		} else {
-			await message.reply('no');
+			await message.reply('doubt');
 		}
 	}
 });
