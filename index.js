@@ -4,6 +4,7 @@ dotenv.config();
 
 import { createLocalGovClient } from '@b4moss/jp-local-gov-id';
 import municipalityDataset from '@b4moss/jp-local-gov-id-data';
+import lineList from './data/lineList.json' with { type: 'json' };
 import stationList from './data/stationList.json' with { type: 'json' };
 
 const localGovClient = await createLocalGovClient({ data: municipalityDataset });
@@ -83,8 +84,32 @@ client.on('messageCreate', async (message) => {
 		if (!questionMessage.author.bot) return;
 
 		const questionMatch = questionMessage.content.match(/^question:\s*(\S+)\s*$/);
-		const quizStation = questionMatch ? stationList.find((station) => station.id === questionMatch[1]) : undefined;
+		const quizStation = questionMatch ? stations.find((station) => station.id === questionMatch[1]) : undefined;
 		if (!quizStation) return;
+
+		if (message.content === '!hint') {
+			const hintType = Math.floor(Math.random() * 4);
+			let hint;
+			switch (hintType) {
+				case 0:
+					hint = `所在市町村は${quizStation.city}です`;
+					break;
+				case 1: {
+					const lineId = quizStation.lines[Math.floor(Math.random() * quizStation.lines.length)];
+					const lineName = lineList.find((line) => line.id === lineId)?.name;
+					hint = `路線の1つは${lineName}です`;
+					break;
+				}
+				case 2:
+					hint = `駅名は${Array.from(quizStation.name).length}文字です`;
+					break;
+				case 3:
+					hint = `駅名の最初の文字は「${Array.from(quizStation.name)[0]}」です`;
+					break;
+			}
+			await message.reply(`hint: ${hint}`);
+			return;
+		}
 
 		if (message.content === '!ans') {
 			await message.reply(`answer: ${quizStation.name}`);

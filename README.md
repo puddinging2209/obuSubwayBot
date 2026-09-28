@@ -43,3 +43,9 @@ https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=6
 ```
 
 > 出題にリプライして、その解答を表示
+
+```
+!hint
+```
+
+> 出題にリプライして、そのヒントを表示
