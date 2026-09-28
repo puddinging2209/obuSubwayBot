@@ -92,12 +92,12 @@ client.on('messageCreate', async (message) => {
 			let hint;
 			switch (hintType) {
 				case 0:
-					hint = `所在市町村は${quizStation.city}です`;
+					hint = `所在地は${quizStation.city}です`;
 					break;
 				case 1: {
 					const lineId = quizStation.lines[Math.floor(Math.random() * quizStation.lines.length)];
 					const lineName = lineList.find((line) => line.id === lineId)?.name;
-					hint = `路線の1つは${lineName}です`;
+					hint = `通る路線の1つは${lineName}です`;
 					break;
 				}
 				case 2:
