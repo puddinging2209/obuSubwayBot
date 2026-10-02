@@ -1,4 +1,4 @@
-import { ChannelType, SlashCommandBuilder } from 'discord.js';
+import { ChannelType, EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import cron from 'node-cron';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
@@ -65,9 +65,9 @@ async function sendDailyStation(client, stations, lineList, date = new Date(), o
 			const channel = await client.channels.fetch(setting.channelId);
 			if (!channel?.isTextBased() || typeof channel.send !== 'function') continue;
 
-			await channel.send(
-				`今日の駅（${dateKey})： ${station.name}(${station.id}) - ${station.prefecture} ${station.city}\n${station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ')}\n時刻表: ${timeTableUrl}?station=${station.id}`,
-			);
+			const messageBody = `今日の駅（${dateKey})： ${station.name}(${station.id}) - ${station.prefecture} ${station.city}\n${station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ')}\n時刻表: ${timeTableUrl}?station=${station.id}`;
+			const embed = new EmbedBuilder().setColor(0x168c8c).setDescription(messageBody);
+			await channel.send({ embeds: [embed] });
 			setting.lastSentDate = dateKey;
 			await saveSettings();
 		} catch (error) {
