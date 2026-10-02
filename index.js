@@ -38,7 +38,7 @@ const client = new Client({
 client.on('clientReady', async () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 	try {
-		await startDailyStation(client, stations);
+		await startDailyStation(client, stations, lineList);
 	} catch (error) {
 		console.error('Failed to start the daily station feature:', error);
 	}
@@ -46,7 +46,7 @@ client.on('clientReady', async () => {
 
 client.on('interactionCreate', async (interaction) => {
 	try {
-		await handleDailyStationInteraction(interaction);
+		await handleDailyStationInteraction(interaction, client, stations, lineList);
 	} catch (error) {
 		console.error('Failed to handle the daily station command:', error);
 		if (interaction.isChatInputCommand() && !interaction.replied && !interaction.deferred) {

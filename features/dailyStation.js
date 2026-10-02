@@ -17,11 +17,11 @@ const tokyoDateFormatter = new Intl.DateTimeFormat('en-US', {
 
 export const dailyStationCommand = new SlashCommandBuilder()
 	.setName('daily-station')
-	.setDescription('1日1駅の送信先を設定します')
+	.setDescription('今日の送信先を設定します')
 	.addSubcommand((subcommand) =>
 		subcommand
 			.setName('set')
-			.setDescription('毎日の駅を送信するチャンネルを設定します')
+			.setDescription('今日の駅を送信するチャンネルを設定します')
 			.addChannelOption((option) =>
 				option
 					.setName('channel')
@@ -30,7 +30,7 @@ export const dailyStationCommand = new SlashCommandBuilder()
 					.setRequired(true),
 			),
 	)
-	.addSubcommand((subcommand) => subcommand.setName('disable').setDescription('毎日の駅の送信を停止します'))
+	.addSubcommand((subcommand) => subcommand.setName('disable').setDescription('今日の駅の送信を停止します'))
 	.toJSON();
 
 function getTokyoDateKey(date) {
@@ -53,11 +53,12 @@ async function saveSettings() {
 	await writeFile(settingsPath, `${JSON.stringify(Object.fromEntries(settings), null, '\t')}\n`);
 }
 
-async function sendDailyStation(client, stations, date = new Date()) {
+async function sendDailyStation(client, stations, lineList, date = new Date(), onlyGuildId) {
 	const dateKey = getTokyoDateKey(date);
 	const station = getDailyStation(stations, date);
 
 	for (const [guildId, setting] of settings) {
+		if (onlyGuildId && guildId !== onlyGuildId) continue;
 		if (setting.lastSentDate === dateKey) continue;
 
 		try {
@@ -75,7 +76,7 @@ async function sendDailyStation(client, stations, date = new Date()) {
 	}
 }
 
-export async function startDailyStation(client, stations) {
+export async function startDailyStation(client, stations, lineList) {
 	try {
 		const savedSettings = await readFile(settingsPath, 'utf8');
 		for (const [guildId, setting] of Object.entries(JSON.parse(savedSettings))) {
@@ -87,14 +88,14 @@ export async function startDailyStation(client, stations) {
 
 	await client.application.commands.set([dailyStationCommand]);
 	const now = new Date();
-	if (now >= getTodaySendTime(now)) await sendDailyStation(client, stations, now);
-	cron.schedule('0 7 * * *', () => sendDailyStation(client, stations), {
+	if (now >= getTodaySendTime(now)) await sendDailyStation(client, stations, lineList, now);
+	cron.schedule('0 7 * * *', () => sendDailyStation(client, stations, lineList), {
 		timezone: 'Asia/Tokyo',
 		noOverlap: true,
 	});
 }
 
-export async function handleDailyStationInteraction(interaction) {
+export async function handleDailyStationInteraction(interaction, client, stations, lineList) {
 	if (!interaction.isChatInputCommand() || interaction.commandName !== 'daily-station') return false;
 	if (!interaction.guildId) {
 		await interaction.reply({ content: 'サーバー内で実行してください。', ephemeral: true });
@@ -105,12 +106,17 @@ export async function handleDailyStationInteraction(interaction) {
 		const channel = interaction.options.getChannel('channel', true);
 		settings.set(interaction.guildId, { channelId: channel.id, lastSentDate: null });
 		await saveSettings();
-		await interaction.reply({ content: `毎日の駅を ${channel} に送信します。`, ephemeral: true });
+		await interaction.reply({ content: `今日の駅を ${channel} に送信します。` });
+
+		const now = new Date();
+		if (now >= getTodaySendTime(now)) {
+			await sendDailyStation(client, stations, lineList, now, interaction.guildId);
+		}
 		return true;
 	}
 
 	settings.delete(interaction.guildId);
 	await saveSettings();
-	await interaction.reply({ content: '毎日の駅の送信を停止しました。', ephemeral: true });
+	await interaction.reply({ content: '今日の駅の送信を停止しました。' });
 	return true;
 }
