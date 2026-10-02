@@ -2,7 +2,7 @@
 
 ### Bot追加リンク
 
-https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=67584&integration_type=0&scope=bot
+https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=68608&integration_type=0&scope=bot%20applications.commands
 
 ---
 
@@ -49,3 +49,20 @@ https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=6
 ```
 
 > 出題にリプライして、そのヒントを表示
+
+### 今日の1駅
+
+毎朝7時（日本時間）に、日付から選ばれた駅を設定したチャンネルへ送信します。
+
+```
+/daily-station set channel:#チャンネル名
+```
+
+> 送信先チャンネルの設定  
+> 午前7時以降に設定した場合、当日の駅が即座に送信されます
+
+```
+/daily-station disable
+```
+
+> 送信を止める
