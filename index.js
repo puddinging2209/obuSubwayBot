@@ -53,9 +53,11 @@ client.on('error', (error) => {
 const healthServer = startHealthServer(process.env.PORT || 10000);
 
 async function startBot() {
+	console.log('Starting bot...');
 	const token = process.env.DISCORD_TOKEN;
 	if (!token) throw new Error('DISCORD_TOKEN environment variable is required.');
 
+	console.log('Initializing municipality data...');
 	const localGovClient = await createLocalGovClient({ data: municipalityDataset });
 	const municipalityEntries = await Promise.all(
 		[...new Set(stationList.map(({ govId }) => govId))].map(async (govId) => {
@@ -74,6 +76,7 @@ async function startBot() {
 		};
 	});
 
+	console.log(`Initialized ${stations.length} stations. Connecting to Discord...`);
 	await client.login(token);
 }
 
