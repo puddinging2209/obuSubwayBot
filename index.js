@@ -68,6 +68,12 @@ client.on('debug', (message) => {
 	}
 });
 
+client.rest.on('rateLimited', ({ global, method, route, retryAfter }) => {
+	console.warn(
+		`Discord REST rate limit: ${method} ${route}, global=${global}, retryAfter=${retryAfter}ms.`,
+	);
+});
+
 const healthServer = startHealthServer(process.env.PORT || 10000);
 
 async function startBot() {
