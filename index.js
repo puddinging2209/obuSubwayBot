@@ -11,28 +11,11 @@ import municipalityDataset from '@b4moss/jp-local-gov-id-data';
 import lineList from './data/lineList.json' with { type: 'json' };
 import stationList from './data/stationList.json' with { type: 'json' };
 
-const localGovClient = await createLocalGovClient({ data: municipalityDataset });
-const municipalityEntries = await Promise.all(
-	[...new Set(stationList.map(({ govId }) => govId))].map(async (govId) => {
-		const municipality = await localGovClient.getMunicipalityByCode(govId);
-		if (!municipality) throw new Error(`Unknown municipality code: ${govId}`);
-		return [govId, municipality];
-	}),
-);
-const municipalitiesByGovId = new Map(municipalityEntries);
-const stations = stationList.map((station) => {
-	const municipality = municipalitiesByGovId.get(station.govId);
-	return {
-		...station,
-		city: municipality.name,
-		prefecture: municipality.prefectureName,
-	};
-});
-
 // botのクライアントを作成
 const client = new Client({
 	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent],
 });
+let stations;
 
 // 起動時の処理
 client.on('clientReady', async () => {
@@ -63,6 +46,41 @@ client.on('messageCreate', async (message) => {
 	await handleQuizMessage(message, stations, lineList);
 });
 
-startHealthServer(process.env.PORT || 10000);
+client.on('error', (error) => {
+	console.error('Discord client error:', error);
+});
 
-client.login(process.env.DISCORD_TOKEN);
+const healthServer = startHealthServer(process.env.PORT || 10000);
+
+async function startBot() {
+	const token = process.env.DISCORD_TOKEN;
+	if (!token) throw new Error('DISCORD_TOKEN environment variable is required.');
+
+	const localGovClient = await createLocalGovClient({ data: municipalityDataset });
+	const municipalityEntries = await Promise.all(
+		[...new Set(stationList.map(({ govId }) => govId))].map(async (govId) => {
+			const municipality = await localGovClient.getMunicipalityByCode(govId);
+			if (!municipality) throw new Error(`Unknown municipality code: ${govId}`);
+			return [govId, municipality];
+		}),
+	);
+	const municipalitiesByGovId = new Map(municipalityEntries);
+	stations = stationList.map((station) => {
+		const municipality = municipalitiesByGovId.get(station.govId);
+		return {
+			...station,
+			city: municipality.name,
+			prefecture: municipality.prefectureName,
+		};
+	});
+
+	await client.login(token);
+}
+
+startBot().catch((error) => {
+	console.error('Bot startup failed:', error);
+	client.destroy();
+	healthServer.close(() => {
+		process.exitCode = 1;
+	});
+});

@@ -10,6 +10,9 @@
 	"author": "",
 	"license": "ISC",
 	"type": "module",
+	"engines": {
+		"node": ">=24"
+	},
 	"dependencies": {
 		"@b4moss/jp-local-gov-id": "^1.2.0",
 		"@b4moss/jp-local-gov-id-data": "^1.0.0",
