@@ -5,6 +5,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 const baseUrl = 'https://puddinging2209.github.io/Obu-City-Transportation-Bureau-HomePage/';
+const myMapUrl = 'https://www.google.com/maps/d/u/0/embed?mid=1B0PjjC6Ff7Ye6ymCk_deCMD9SmbK8dn2';
 
 const settingsPath = fileURLToPath(new URL('../data/dailyStationSettings.json', import.meta.url));
 const settings = new Map();
@@ -38,6 +39,11 @@ function getTokyoDateKey(date) {
 	return `${parts.year}-${parts.month}-${parts.day}`;
 }
 
+function getDateText(date) {
+	const parts = Object.fromEntries(tokyoDateFormatter.formatToParts(date).map(({ type, value }) => [type, value]));
+	return `${parts.year}年${parts.month}月${parts.day}日`;
+}
+
 export function getDailyStation(stations, date = new Date()) {
 	const dateKey = getTokyoDateKey(date);
 	const hash = createHash('sha256').update(dateKey).digest();
@@ -68,11 +74,21 @@ async function sendDailyStation(client, stations, lineList, date = new Date(), o
 			const color = lineList.find((line) => line.id === station.lines[Math.floor(Math.random() * station.lines.length)])?.color || 0xffffff;
 			const lineNames = station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ・ ');
 			const timetableUrl = `${baseUrl}#/timetable?station=${station.id}`;
+			const googleMapsAppUrl = new URL('https://www.google.com/maps/search/');
+			googleMapsAppUrl.searchParams.set('api', '1');
+			googleMapsAppUrl.searchParams.set('query', `${station.pos[0]},${station.pos[1]}`);
+			const myMapLink = `${myMapUrl}&ll=${station.pos[0]}%2C${station.pos[1]}&z=14`;
 			const embed = new EmbedBuilder()
 				.setColor(color)
 				.setTitle(`${station.name} (${station.id})`)
-				.setDescription(`**${dateKey}の今日の駅**\n${station.prefecture} ${station.city}`)
-				.addFields({ name: '路線', value: lineNames }, { name: '時刻表', value: `[時刻表を見る](${timetableUrl})` });
+				.setDescription(`**${getDateText(date)}の駅**\n${station.prefecture} ${station.city}`)
+				.addFields(
+					{ name: '路線', value: lineNames },
+					{ name: '時刻表', value: `[時刻表を見る](${timetableUrl})` },
+					{ name: 'Google Maps', value: `[駅の位置を開く](${googleMapsAppUrl})`, inline: true },
+					{ name: 'Google My Maps', value: `[周辺の路線図を見る](${myMapLink})`, inline: true },
+				)
+				.setFooter({ text: '今日の駅は毎日7時に送信されます。' });
 			await channel.send({ embeds: [embed] });
 			setting.lastSentDate = dateKey;
 			await saveSettings();
