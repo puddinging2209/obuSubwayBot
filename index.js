@@ -63,7 +63,9 @@ client.on('shardReconnecting', (shardId) => {
 });
 
 client.on('debug', (message) => {
-	if (message.startsWith('[WS =>')) console.debug('Discord gateway:', message);
+	if (message.startsWith('[WS =>') || message.includes('Preparing to connect to the gateway')) {
+		console.debug('Discord gateway:', message);
+	}
 });
 
 const healthServer = startHealthServer(process.env.PORT || 10000);
