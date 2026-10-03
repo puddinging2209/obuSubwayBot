@@ -95,16 +95,6 @@ async function startBot() {
 	});
 
 	console.log(`Initialized ${stations.length} stations. Connecting to Discord...`);
-	console.log('Checking Discord API connectivity...');
-	const response = await fetch('https://discord.com/api/v10/gateway/bot', {
-		headers: { Authorization: `Bot ${token.replace(/^(Bot|Bearer)\s*/i, '')}` },
-		signal: AbortSignal.timeout(15000),
-	});
-	if (!response.ok) {
-		throw new Error(`Discord API gateway check failed (${response.status} ${response.statusText}).`);
-	}
-	await response.body?.cancel();
-	console.log('Discord API is reachable. Starting Gateway login...');
 	console.log('Calling Discord client.login()...');
 	await client.login(token);
 }
