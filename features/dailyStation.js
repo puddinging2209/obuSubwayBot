@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-const timeTableUrl = 'https://puddinging2209.github.io/Obu-City-Transportation-Bureau-HomePage/#/timetable';
+const baseUrl = 'https://puddinging2209.github.io/Obu-City-Transportation-Bureau-HomePage/';
 
 const settingsPath = fileURLToPath(new URL('../data/dailyStationSettings.json', import.meta.url));
 const settings = new Map();
@@ -65,9 +65,14 @@ async function sendDailyStation(client, stations, lineList, date = new Date(), o
 			const channel = await client.channels.fetch(setting.channelId);
 			if (!channel?.isTextBased() || typeof channel.send !== 'function') continue;
 
-			const messageBody = `今日の駅（${dateKey})： ${station.name}(${station.id}) - ${station.prefecture} ${station.city}\n${station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ')}\n時刻表: ${timeTableUrl}?station=${station.id}`;
 			const color = lineList.find((line) => line.id === station.lines[Math.floor(Math.random() * station.lines.length)])?.color || 0xffffff;
-			const embed = new EmbedBuilder().setColor(color).setDescription(messageBody);
+			const lineNames = station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ・ ');
+			const timetableUrl = `${baseUrl}#/timetable?station=${station.id}`;
+			const embed = new EmbedBuilder()
+				.setColor(color)
+				.setTitle(`${station.name} (${station.id})`)
+				.setDescription(`**${dateKey}の今日の駅**\n${station.prefecture} ${station.city}`)
+				.addFields({ name: '路線', value: lineNames }, { name: '時刻表', value: `[時刻表を見る](${timetableUrl})` });
 			await channel.send({ embeds: [embed] });
 			setting.lastSentDate = dateKey;
 			await saveSettings();
