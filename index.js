@@ -75,7 +75,12 @@ client.rest.on('rateLimited', ({ global, method, route, retryAfter }) => {
 });
 
 client.rest.on('response', (request, response) => {
-	console.log(`Discord REST response: ${request.method} ${response.status}`);
+	const retryAfter = response.headers.get('retry-after');
+	console.log(
+		`Discord REST response: ${request.method} ${response.status}${
+			retryAfter ? `, retry-after=${retryAfter}s` : ''
+		}`,
+	);
 });
 
 const healthServer = startHealthServer(process.env.PORT || 10000);
@@ -106,17 +111,7 @@ async function startBot() {
 
 	console.log(`Initialized ${stations.length} stations. Connecting to Discord...`);
 	console.log('Calling Discord client.login()...');
-	let loginTimeout;
-	try {
-		await Promise.race([
-			client.login(token),
-			new Promise((_, reject) => {
-				loginTimeout = setTimeout(() => reject(new Error('Discord login timed out after 30 seconds.')), 30_000);
-			}),
-		]);
-	} finally {
-		clearTimeout(loginTimeout);
-	}
+	await client.login(token);
 }
 
 startBot().catch((error) => {
