@@ -62,6 +62,10 @@ client.on('shardReconnecting', (shardId) => {
 	console.warn(`Discord gateway shard ${shardId} is reconnecting.`);
 });
 
+client.on('debug', (message) => {
+	if (message.startsWith('[WS =>')) console.debug('Discord gateway:', message);
+});
+
 const healthServer = startHealthServer(process.env.PORT || 10000);
 
 async function startBot() {
