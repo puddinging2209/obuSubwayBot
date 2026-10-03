@@ -50,6 +50,18 @@ client.on('error', (error) => {
 	console.error('Discord client error:', error);
 });
 
+client.on('shardError', (error, shardId) => {
+	console.error(`Discord gateway shard ${shardId} error:`, error);
+});
+
+client.on('shardDisconnect', (event, shardId) => {
+	console.error(`Discord gateway shard ${shardId} disconnected:`, event);
+});
+
+client.on('shardReconnecting', (shardId) => {
+	console.warn(`Discord gateway shard ${shardId} is reconnecting.`);
+});
+
 const healthServer = startHealthServer(process.env.PORT || 10000);
 
 async function startBot() {
