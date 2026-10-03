@@ -95,6 +95,7 @@ async function startBot() {
 	});
 
 	console.log(`Initialized ${stations.length} stations. Connecting to Discord...`);
+	console.log('Calling Discord client.login()...');
 	await client.login(token);
 }
 
