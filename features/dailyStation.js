@@ -55,6 +55,18 @@ export function getTodaySendTime(date = new Date()) {
 	return new Date(Date.UTC(year, month - 1, day, 7) - 9 * 60 * 60 * 1000);
 }
 
+function matchesDefinition(current, desired) {
+	if (Array.isArray(desired)) {
+		return (
+			Array.isArray(current) && current.length === desired.length && desired.every((value, index) => matchesDefinition(current[index], value))
+		);
+	}
+	if (desired && typeof desired === 'object') {
+		return current && typeof current === 'object' && Object.entries(desired).every(([key, value]) => matchesDefinition(current[key], value));
+	}
+	return current === desired;
+}
+
 async function saveSettings() {
 	await writeFile(settingsPath, `${JSON.stringify(Object.fromEntries(settings), null, '\t')}\n`);
 }
@@ -108,7 +120,10 @@ export async function startDailyStation(client, stations, lineList) {
 		if (error.code !== 'ENOENT') throw error;
 	}
 
-	await client.application.commands.set([dailyStationCommand]);
+	const commands = await client.application.commands.fetch();
+	if (commands.size !== 1 || !matchesDefinition(commands.first().toJSON(), dailyStationCommand)) {
+		await client.application.commands.set([dailyStationCommand]);
+	}
 	const now = new Date();
 	if (now >= getTodaySendTime(now)) await sendDailyStation(client, stations, lineList, now);
 	cron.schedule('0 7 * * *', () => sendDailyStation(client, stations, lineList), {
