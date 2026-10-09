@@ -66,3 +66,9 @@ https://discord.com/oauth2/authorize?client_id=1529794042840219732&permissions=6
 ```
 
 > 送信を止める
+
+```
+/daily-station view date:2026-10-08
+```
+
+> 指定した日付（日本時間）の今日の駅を自分だけに表示します。日付は `YYYY-MM-DD` 形式で指定してください。未来の日付は閲覧できません。

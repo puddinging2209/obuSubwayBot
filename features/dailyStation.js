@@ -18,7 +18,7 @@ const tokyoDateFormatter = new Intl.DateTimeFormat('en-US', {
 
 export const dailyStationCommand = new SlashCommandBuilder()
 	.setName('daily-station')
-	.setDescription('今日の送信先を設定します')
+	.setDescription('今日の駅の送信先を設定したり、過去の駅を閲覧します')
 	.addSubcommand((subcommand) =>
 		subcommand
 			.setName('set')
@@ -32,6 +32,17 @@ export const dailyStationCommand = new SlashCommandBuilder()
 			),
 	)
 	.addSubcommand((subcommand) => subcommand.setName('disable').setDescription('今日の駅の送信を停止します'))
+	.addSubcommand((subcommand) =>
+		subcommand
+			.setName('view')
+			.setDescription('指定した日付の今日の駅を閲覧します')
+			.addStringOption((option) =>
+				option
+					.setName('date')
+					.setDescription('閲覧する日付（日本時間、YYYY-MM-DD）')
+					.setRequired(true),
+			),
+	)
 	.toJSON();
 
 function getTokyoDateKey(date) {
@@ -42,6 +53,22 @@ function getTokyoDateKey(date) {
 function getDateText(date) {
 	const parts = Object.fromEntries(tokyoDateFormatter.formatToParts(date).map(({ type, value }) => [type, value]));
 	return `${parts.year}年${parts.month}月${parts.day}日`;
+}
+
+function parseDateKey(dateKey) {
+	const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateKey);
+	if (!match) return null;
+
+	const [, year, month, day] = match.map(Number);
+	const date = new Date(Date.UTC(year, month - 1, day, 12));
+	if (
+		date.getUTCFullYear() !== year ||
+		date.getUTCMonth() !== month - 1 ||
+		date.getUTCDate() !== day
+	) {
+		return null;
+	}
+	return date;
 }
 
 export function getDailyStation(stations, date = new Date()) {
@@ -71,6 +98,27 @@ async function saveSettings() {
 	await writeFile(settingsPath, `${JSON.stringify(Object.fromEntries(settings), null, '\t')}\n`);
 }
 
+function createDailyStationEmbed(station, lineList, date) {
+	const color = lineList.find((line) => line.id === station.lines[Math.floor(Math.random() * station.lines.length)])?.color || 0xffffff;
+	const lineNames = station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ・ ');
+	const timetableUrl = `${baseUrl}#/timetable?station=${station.id}`;
+	const googleMapsAppUrl = new URL('https://www.google.com/maps/search/');
+	googleMapsAppUrl.searchParams.set('api', '1');
+	googleMapsAppUrl.searchParams.set('query', `${station.pos[0]},${station.pos[1]}`);
+	const myMapLink = `${myMapUrl}&ll=${station.pos[0]}%2C${station.pos[1]}&z=14`;
+	return new EmbedBuilder()
+		.setColor(color)
+		.setTitle(`${station.name} (${station.id})`)
+		.setDescription(`**${getDateText(date)}の駅**\n${station.prefecture} ${station.city}`)
+		.addFields(
+			{ name: '路線', value: lineNames },
+			{ name: '時刻表', value: `[時刻表を見る](${timetableUrl})` },
+			{ name: 'Google Maps', value: `[駅の位置を開く](${googleMapsAppUrl})`, inline: true },
+			{ name: 'Google My Maps', value: `[周辺の路線図を見る](${myMapLink})`, inline: true },
+		)
+		.setFooter({ text: '今日の駅は毎日7時に送信されます。' });
+}
+
 async function sendDailyStation(client, stations, lineList, date = new Date(), onlyGuildId) {
 	const dateKey = getTokyoDateKey(date);
 	const station = getDailyStation(stations, date);
@@ -83,25 +131,7 @@ async function sendDailyStation(client, stations, lineList, date = new Date(), o
 			const channel = await client.channels.fetch(setting.channelId);
 			if (!channel?.isTextBased() || typeof channel.send !== 'function') continue;
 
-			const color = lineList.find((line) => line.id === station.lines[Math.floor(Math.random() * station.lines.length)])?.color || 0xffffff;
-			const lineNames = station.lines.map((id) => lineList.find((line) => line.id === id).name).join(' ・ ');
-			const timetableUrl = `${baseUrl}#/timetable?station=${station.id}`;
-			const googleMapsAppUrl = new URL('https://www.google.com/maps/search/');
-			googleMapsAppUrl.searchParams.set('api', '1');
-			googleMapsAppUrl.searchParams.set('query', `${station.pos[0]},${station.pos[1]}`);
-			const myMapLink = `${myMapUrl}&ll=${station.pos[0]}%2C${station.pos[1]}&z=14`;
-			const embed = new EmbedBuilder()
-				.setColor(color)
-				.setTitle(`${station.name} (${station.id})`)
-				.setDescription(`**${getDateText(date)}の駅**\n${station.prefecture} ${station.city}`)
-				.addFields(
-					{ name: '路線', value: lineNames },
-					{ name: '時刻表', value: `[時刻表を見る](${timetableUrl})` },
-					{ name: 'Google Maps', value: `[駅の位置を開く](${googleMapsAppUrl})`, inline: true },
-					{ name: 'Google My Maps', value: `[周辺の路線図を見る](${myMapLink})`, inline: true },
-				)
-				.setFooter({ text: '今日の駅は毎日7時に送信されます。' });
-			await channel.send({ embeds: [embed] });
+			await channel.send({ embeds: [createDailyStationEmbed(station, lineList, date)] });
 			setting.lastSentDate = dateKey;
 			await saveSettings();
 		} catch (error) {
@@ -139,7 +169,31 @@ export async function handleDailyStationInteraction(interaction, client, station
 		return true;
 	}
 
-	if (interaction.options.getSubcommand() === 'set') {
+	const subcommand = interaction.options.getSubcommand();
+	if (subcommand === 'view') {
+		const dateKey = interaction.options.getString('date', true);
+		const date = parseDateKey(dateKey);
+		if (!date) {
+			await interaction.reply({
+				content: '日付は実在する日付を YYYY-MM-DD 形式で指定してください（例: 2026-10-08）。',
+				ephemeral: true,
+			});
+			return true;
+		}
+		if (dateKey > getTokyoDateKey(new Date())) {
+			await interaction.reply({ content: '未来の日付の駅は閲覧できません。', ephemeral: true });
+			return true;
+		}
+
+		const station = getDailyStation(stations, date);
+		await interaction.reply({
+			embeds: [createDailyStationEmbed(station, lineList, date)],
+			ephemeral: true,
+		});
+		return true;
+	}
+
+	if (subcommand === 'set') {
 		const channel = interaction.options.getChannel('channel', true);
 		settings.set(interaction.guildId, { channelId: channel.id, lastSentDate: null });
 		await saveSettings();
