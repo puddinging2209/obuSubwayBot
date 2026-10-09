@@ -69,18 +69,17 @@ client.on('debug', (message) => {
 });
 
 client.rest.on('rateLimited', ({ global, method, route, retryAfter }) => {
-	console.warn(
-		`Discord REST rate limit: ${method} ${route}, global=${global}, retryAfter=${retryAfter}ms.`,
-	);
+	console.warn(`Discord REST rate limit: ${method} ${route}, global=${global}, retryAfter=${retryAfter}ms.`);
 });
 
-client.rest.on('response', (request, response) => {
+client.rest.on('response', async (request, response) => {
+	if (response.status !== 429) return;
+
 	const retryAfter = response.headers.get('retry-after');
-	console.log(
-		`Discord REST response: ${request.method} ${response.status}${
-			retryAfter ? `, retry-after=${retryAfter}s` : ''
-		}`,
-	);
+	const body = await response.text();
+
+	console.error(`Discord REST 429: ${request.method} ${request.path}, retry-after=${retryAfter}s`);
+	console.error('Discord REST 429 body:', body);
 });
 
 const healthServer = startHealthServer(process.env.PORT || 10000);
