@@ -1,3 +1,34 @@
+function getHintType(content) {
+	if (/^hint: 所在地は.*です$/.test(content)) return 0;
+	if (/^hint: 通る路線の1つは.*です$/.test(content)) return 1;
+	if (/^hint: 駅名は\d+文字です$/.test(content)) return 2;
+	if (/^hint: 駅名の最初の文字は「.*」です$/.test(content)) return 3;
+	return undefined;
+}
+
+async function getUsedHintTypes(message, questionMessage) {
+	const usedHintTypes = new Set();
+	let before = message.id;
+
+	while (true) {
+		const previousMessages = await message.channel.messages.fetch({ before, limit: 100 });
+		if (previousMessages.size === 0) break;
+
+		for (const previousMessage of previousMessages.values()) {
+			if (previousMessage.author.bot && previousMessage.reference?.messageId === questionMessage.id) {
+				const hintType = getHintType(previousMessage.content);
+				if (hintType !== undefined) usedHintTypes.add(hintType);
+			}
+		}
+
+		const oldestMessage = previousMessages.last();
+		if (!oldestMessage || BigInt(oldestMessage.id) <= BigInt(questionMessage.id)) break;
+		before = oldestMessage.id;
+	}
+
+	return usedHintTypes;
+}
+
 export async function handleQuizMessage(message, stations, lineList) {
 	if (message.content.startsWith('!quiz')) {
 		const filters = message.content.split(' ').slice(1);
@@ -24,7 +55,14 @@ export async function handleQuizMessage(message, stations, lineList) {
 	if (!quizStation) return false;
 
 	if (message.content === '!hint') {
-		const hintType = Math.floor(Math.random() * 4);
+		const usedHintTypes = await getUsedHintTypes(message, questionMessage);
+		const availableHintTypes = [0, 1, 2, 3].filter((hintType) => !usedHintTypes.has(hintType));
+		if (availableHintTypes.length === 0) {
+			await message.reply('これ以上ヒントはありません');
+			return true;
+		}
+
+		const hintType = availableHintTypes[Math.floor(Math.random() * availableHintTypes.length)];
 		let hint;
 		switch (hintType) {
 			case 0:
