@@ -35,7 +35,7 @@ export async function handleQuizMessage(message, stations, lineList) {
 		const candidates =
 			filters.length === 0 ? stations : stations.filter((station) => filters.includes(station.prefecture) || filters.includes(station.city));
 		const random = Math.floor(Math.random() * candidates.length);
-		await message.reply(`question: **${candidates[random].id}**`);
+		await message.reply(`## question: **${candidates[random].id}**`);
 		return true;
 	}
 
@@ -50,8 +50,9 @@ export async function handleQuizMessage(message, stations, lineList) {
 
 	if (!questionMessage.author.bot) return false;
 
-	const questionMatch = questionMessage.content.match(/^question:\s*(\S+)\s*$/);
-	const quizStation = questionMatch ? stations.find((station) => station.id === questionMatch[1]) : undefined;
+	const questionMatch = questionMessage.content.match(/(?:^|\n)question:\s*(?:\*\*(\S+)\*\*|(\S+))\s*(?:\n|$)/);
+	const questionId = questionMatch?.[1] ?? questionMatch?.[2];
+	const quizStation = questionId ? stations.find((station) => station.id === questionId) : undefined;
 	if (!quizStation) return false;
 
 	if (message.content === '!hint') {
