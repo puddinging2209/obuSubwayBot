@@ -8,6 +8,8 @@ function getHintType(content) {
 
 async function getUsedHintTypes(message, questionMessage) {
 	const usedHintTypes = new Set();
+	const hintReplies = [];
+	const hintCommands = new Map();
 	let before = message.id;
 
 	while (true) {
@@ -15,15 +17,23 @@ async function getUsedHintTypes(message, questionMessage) {
 		if (previousMessages.size === 0) break;
 
 		for (const previousMessage of previousMessages.values()) {
-			if (previousMessage.author.bot && previousMessage.reference?.messageId === questionMessage.id) {
+			if (!previousMessage.author.bot && previousMessage.content === '!hint' && previousMessage.reference?.messageId === questionMessage.id) {
+				hintCommands.set(previousMessage.id, true);
+			} else if (previousMessage.author.bot && previousMessage.reference?.messageId) {
 				const hintType = getHintType(previousMessage.content);
-				if (hintType !== undefined) usedHintTypes.add(hintType);
+				if (hintType !== undefined) {
+					hintReplies.push({ hintType, commandId: previousMessage.reference.messageId });
+				}
 			}
 		}
 
 		const oldestMessage = previousMessages.last();
 		if (!oldestMessage || BigInt(oldestMessage.id) <= BigInt(questionMessage.id)) break;
 		before = oldestMessage.id;
+	}
+
+	for (const { hintType, commandId } of hintReplies) {
+		if (hintCommands.has(commandId)) usedHintTypes.add(hintType);
 	}
 
 	return usedHintTypes;
