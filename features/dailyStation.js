@@ -180,8 +180,14 @@ export async function handleDailyStationInteraction(interaction, client, station
 			});
 			return true;
 		}
-		if (dateKey > getTokyoDateKey(new Date())) {
+		const now = new Date();
+		const todayKey = getTokyoDateKey(now);
+		if (dateKey > todayKey) {
 			await interaction.reply({ content: '未来の日付の駅は閲覧できません。', ephemeral: true });
+			return true;
+		}
+		if (dateKey === todayKey && now < getTodaySendTime(now)) {
+			await interaction.reply({ content: '今日の駅は日本時間の午前7時以降に閲覧できます。', ephemeral: true });
 			return true;
 		}
 
