@@ -35,7 +35,7 @@ export async function handleQuizMessage(message, stations, lineList) {
 		const candidates =
 			filters.length === 0 ? stations : stations.filter((station) => filters.includes(station.prefecture) || filters.includes(station.city));
 		const random = Math.floor(Math.random() * candidates.length);
-		await message.reply(`## question: **${candidates[random].id}**`);
+		await message.reply(`## quiz: ${'`'}${candidates[random].id}${'`'}`);
 		return true;
 	}
 
@@ -50,8 +50,10 @@ export async function handleQuizMessage(message, stations, lineList) {
 
 	if (!questionMessage.author.bot) return false;
 
-	const questionMatch = questionMessage.content.match(/(?:^|\n)question:\s*(?:\*\*(\S+)\*\*|(\S+))\s*(?:\n|$)/);
-	const questionId = questionMatch?.[1] ?? questionMatch?.[2];
+	const questionMatch = questionMessage.content.match(
+		/(?:^|\n)## quiz:\s*\x60([^\x60]+)\x60\s*(?:\n|$)|(?:^|\n)question:\s*(?:\*\*(\S+)\*\*|(\S+))\s*(?:\n|$)/,
+	);
+	const questionId = questionMatch?.[1] ?? questionMatch?.[2] ?? questionMatch?.[3];
 	const quizStation = questionId ? stations.find((station) => station.id === questionId) : undefined;
 	if (!quizStation) return false;
 
