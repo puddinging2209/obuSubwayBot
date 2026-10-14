@@ -36,12 +36,7 @@ export const dailyStationCommand = new SlashCommandBuilder()
 		subcommand
 			.setName('view')
 			.setDescription('指定した日付の今日の駅を閲覧します')
-			.addStringOption((option) =>
-				option
-					.setName('date')
-					.setDescription('閲覧する日付（日本時間、YYYY-MM-DD）')
-					.setRequired(true),
-			),
+			.addStringOption((option) => option.setName('date').setDescription('閲覧する日付（日本時間、YYYY-MM-DD）').setRequired(true)),
 	)
 	.toJSON();
 
@@ -61,11 +56,7 @@ function parseDateKey(dateKey) {
 
 	const [, year, month, day] = match.map(Number);
 	const date = new Date(Date.UTC(year, month - 1, day, 12));
-	if (
-		date.getUTCFullYear() !== year ||
-		date.getUTCMonth() !== month - 1 ||
-		date.getUTCDate() !== day
-	) {
+	if (date.getUTCFullYear() !== year || date.getUTCMonth() !== month - 1 || date.getUTCDate() !== day) {
 		return null;
 	}
 	return date;
@@ -201,9 +192,10 @@ export async function handleDailyStationInteraction(interaction, client, station
 
 	if (subcommand === 'set') {
 		const channel = interaction.options.getChannel('channel', true);
+		await interaction.deferReply();
 		settings.set(interaction.guildId, { channelId: channel.id, lastSentDate: null });
 		await saveSettings();
-		await interaction.reply({ content: `今日の駅を ${channel} に送信します。` });
+		await interaction.editReply({ content: `今日の駅を ${channel} に送信します。` });
 
 		const now = new Date();
 		if (now >= getTodaySendTime(now)) {
@@ -212,8 +204,9 @@ export async function handleDailyStationInteraction(interaction, client, station
 		return true;
 	}
 
+	await interaction.deferReply();
 	settings.delete(interaction.guildId);
 	await saveSettings();
-	await interaction.reply({ content: '今日の駅の送信を停止しました。' });
+	await interaction.editReply({ content: '今日の駅の送信を停止しました。' });
 	return true;
 }

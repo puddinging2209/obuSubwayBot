@@ -32,7 +32,9 @@ client.on('interactionCreate', async (interaction) => {
 		await handleDailyStationInteraction(interaction, client, stations, lineList);
 	} catch (error) {
 		console.error('Failed to handle the daily station command:', error);
-		if (interaction.isChatInputCommand() && !interaction.replied && !interaction.deferred) {
+		if (interaction.isChatInputCommand() && interaction.deferred) {
+			await interaction.editReply({ content: '設定に失敗しました。' });
+		} else if (interaction.isChatInputCommand() && !interaction.replied) {
 			await interaction.reply({ content: '設定に失敗しました。', ephemeral: true });
 		}
 	}
